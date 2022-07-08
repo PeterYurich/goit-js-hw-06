@@ -15,20 +15,20 @@ const images = [
 
 const galleryEl = document.querySelector('.gallery')
 
-const imagesArray = images.map( (image) => 
-    `<img src="${image.url}" alt="${image.alt}">`
+const imagesArray = images.map((image) =>
+  `<img src="${image.url}" alt="${image.alt}">`
 ).join("")
-
-
 
 galleryEl.insertAdjacentHTML("afterbegin", imagesArray)
 
-const galleryItems = galleryEl.children
+const galleryItemsArray = galleryEl.children
 
-// galleryItems.forEach((galleryItemEl) =>
-// galleryItemEl.classList.add("gallery-item")
-// )
 
-// galleryEl.children.forEach((galleryItemEl) =>
-// galleryItemEl.classList.add("gallery-item")
-// )
+// galleryEl.children.forEach(function (galleryItem) {
+//   galleryItem.classList.add("gallery-item")
+// })
+
+for (let i = 0; i < galleryItemsArray.length; i += 1) {
+  galleryItemsArray[i].classList.add("gallery-item")
+}
+
