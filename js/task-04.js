@@ -16,7 +16,7 @@
 //     counterValue = Number(counterValue.textContent) + 1
 // })
 
-// Так работают кнопки:
+// Так кнопки работают:
 
 const counterValue = document.querySelector("#value");
 
