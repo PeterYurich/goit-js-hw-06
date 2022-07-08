@@ -13,22 +13,14 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery')
+const galleryEl = document.querySelector('.gallery');
 
 const imagesArray = images.map((image) =>
-  `<img src="${image.url}" alt="${image.alt}">`
-).join("")
+  `<img class="gallery-item" src="${image.url}" alt="${image.alt}">`
+).join("");
+
+console.log(imagesArray)
 
 galleryEl.insertAdjacentHTML("afterbegin", imagesArray)
 
-const galleryItemsArray = galleryEl.children
-
-
-// galleryEl.children.forEach(function (galleryItem) {
-//   galleryItem.classList.add("gallery-item")
-// })
-
-for (let i = 0; i < galleryItemsArray.length; i += 1) {
-  galleryItemsArray[i].classList.add("gallery-item")
-}
-
+const galleryItemsArray = galleryEl.children;
