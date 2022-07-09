@@ -1,35 +1,18 @@
 //Это код по шагам, прописанным в задании, но так кнопки не работают:
- 
-// let counterValue = 0;
-// document.querySelector("#value").innerHTML = counterValue;
 
-// const decrementBtnEl = document.querySelector
-// ('button[data-action="decrement"]');
-// const incrementBtnEl = document.querySelector
-// ('button[data-action="increment"]');
-
-// decrementBtnEl.addEventListener('click', () => {
-//     counterValue -= 1
-// })
-
-// incrementBtnEl.addEventListener('click', () => {
-//     counterValue = Number(counterValue.textContent) + 1
-// })
-
-// Так кнопки работают:
-
-const counterValue = document.querySelector("#value");
+let counterValue = 0;
 
 const decrementBtnEl = document.querySelector
-('button[data-action="decrement"]');
+    ('button[data-action="decrement"]');
 const incrementBtnEl = document.querySelector
-('button[data-action="increment"]');
+    ('button[data-action="increment"]');
 
 decrementBtnEl.addEventListener('click', () => {
-    counterValue.textContent -= 1
+    counterValue -= 1
+    document.querySelector("#value").textContent = counterValue;
 })
 
 incrementBtnEl.addEventListener('click', () => {
-    counterValue.textContent = Number(counterValue.textContent) + 1
+    counterValue += 1
+    document.querySelector("#value").textContent = counterValue;
 })
-
