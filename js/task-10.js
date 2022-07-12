@@ -16,7 +16,6 @@ const createBoxes = () => {
 
   const amount = document.querySelector("[type=number").value;
 
-
   const boxesArray = [];
 
   for (let i = 0; i <= amount; i += 1) {
@@ -26,8 +25,11 @@ const createBoxes = () => {
 
   boxContainerEl.insertAdjacentHTML("afterbegin", boxesArray.join(""));
 
-  console.log(boxContainerEl.children);
+  // 
 
+  const boxesElArray = [...boxContainerEl.children]
+
+  console.log(boxesElArray)
 }
 
 createBtnEl.addEventListener('click', createBoxes)
