@@ -9,6 +9,7 @@ function formSubmitHandler(event) {
 
     if (emailInputEl.value === "" || passwordInputEl.value === "") {
         alert("Every input has to be filled in")
+        return
     };
 
     const emailValue = event.currentTarget.elements.email.value;
@@ -18,4 +19,6 @@ function formSubmitHandler(event) {
         email: emailValue,
         password: passwordValue,
     }
+
+    console.log(formValues)
 }
