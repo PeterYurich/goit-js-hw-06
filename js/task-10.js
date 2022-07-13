@@ -6,13 +6,9 @@ const boxContainerEl = document.querySelector("#boxes");
 const createBtnEl = document.querySelector('button[data-create]');
 const destroyBtnEl = document.querySelector('button[data-destroy]');
 
-// создание дивов:
 
 const createBoxes = () => {
-  console.log('the function "createBoxes" has started')
-
   const amount = document.querySelector("[type=number]").value;
-
   const boxesArray = [];
 
   for (let i = 1; i <= amount; i += 1) {
@@ -25,14 +21,9 @@ const createBoxes = () => {
     }
 
     boxContainerEl.append(...boxesArray);
-
-console.log('the function "createBoxes" has finished')
 }
-
-
 createBtnEl.addEventListener('click', createBoxes);
 
-// очистка:
 
 destroyBtnEl.addEventListener('click', () => {
   boxContainerEl.innerHTML = ''
