@@ -16,4 +16,4 @@ const ingredientsEls = ingredients.map((ingredient) => {
 
 document.querySelector("#ingredients").append(...ingredientsEls)
 
-console.log(document.querySelectorAll(".item"))
+// console.log(document.querySelectorAll(".item"))
