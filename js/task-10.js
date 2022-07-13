@@ -15,25 +15,16 @@ const createBoxes = () => {
 
   const boxesArray = [];
 
-  for (let i = 0; i <= amount; i += 1) {
-    let box = document.createElement("div");
-    boxesArray.push("<div></div>");
+  for (let i = 1; i <= amount; i += 1) {
+    const box = document.createElement("div");
+    box.style.width = `${20 + (10 * i)}px`
+    box.style.height = `${20 + (10 * i)}px`
+    const randomColor = getRandomHexColor()
+    box.style.backgroundColor = `${randomColor}`;
+    boxesArray.push(box)
     }
 
-  boxContainerEl.insertAdjacentHTML("afterbegin", boxesArray.join(""));
-
-  // проверка создания в консоле
-  // const boxesElArray = [...boxContainerEl.children];
-  // console.log(boxesElArray);
-
-  // изменение цвета:
-
-  const boxesEls = boxContainerEl.children;
-  console.log(boxesEls)
-  // boxesEls.forEach(function paintBoxes (boxEl, index) {
-  // boxEl.classList.add("df")
-  // console.log(`${boxEl} has index ${index}`)
-// });
+    boxContainerEl.append(...boxesArray);
 
 console.log('the function "createBoxes" has finished')
 }
